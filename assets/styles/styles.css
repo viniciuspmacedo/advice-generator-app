@@ -44,7 +44,7 @@ main {
     position: relative;
 }
 
-button{
+button {
     background-color: var(--neon-green);
     height: 60px;
     width: 60px;
@@ -54,6 +54,7 @@ button{
     justify-content: center;
     position: absolute;
     bottom: -30px;
+    border: none;
 }
 
 .advice-title {
@@ -71,7 +72,7 @@ button{
     text-align: center;
 }
 
-.divider{
+.divider {
     margin: 32px 0;
 }
 
@@ -83,4 +84,32 @@ button{
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+
+.loading {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    ;
+    background-color: var(--dark-blue);
+    color: var(--neon-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader {
+    animation: is-rotating 0.5s infinite;
+    height: 60px;
+    width: 60px;
+    border: 6px solid var(--light-cyan);
+    border-top-color: var(--neon-green);
+    border-radius: 50%;
+}
+
+@keyframes is-rotating{
+    to{
+        transform: rotate(1turn);
+    }
 }

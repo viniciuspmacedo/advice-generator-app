@@ -22,18 +22,18 @@
 }
 
 body {
-    margin: 16px;
     background-color: var(--dark-blue);
     color: var(--light-cyan);
     height: 100vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 main {
-    max-width: 340px;
+    width: 340px;
     background-color: var(--dark-grayish-blue);
     padding: 32px 16px;
     border-radius: 16px;
@@ -57,6 +57,12 @@ button {
     border: none;
 }
 
+button:hover{
+    cursor: pointer;
+    background-color: var(--neon-green);
+    box-shadow: 0px 0px 32px var(--neon-green);
+}
+
 .advice-title {
     font-size: 10px;
     color: var(--neon-green);
@@ -74,24 +80,17 @@ button {
 
 .divider {
     margin: 32px 0;
+    background-image: url('../images/pattern-divider-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 26px;
+    width: 100%;
 }
-
-/* Atribuition */
-.attribution {
-    font-size: 11px;
-    text-align: center;
-}
-
-.attribution a {
-    color: hsl(228, 45%, 44%);
-}
-
 
 .loading {
     height: 100%;
     width: 100%;
     position: absolute;
-    ;
     background-color: var(--dark-blue);
     color: var(--neon-green);
     display: flex;
@@ -111,5 +110,16 @@ button {
 @keyframes is-rotating{
     to{
         transform: rotate(1turn);
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    main{
+        width: 504px;
+        padding: 32px;
+    }
+
+    .divider{
+        background-image: url('../images/pattern-divider-desktop.svg');
     }
 }

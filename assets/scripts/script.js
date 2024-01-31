@@ -19,8 +19,8 @@ async function getDataFromApi() {
 }
 
 function fillElements(data) {
-    adviceIdElement.innerText = data['slip'].id
-    adviceElement.innerText = data['slip'].advice
+    adviceIdElement.innerText = data['slip'].id;
+    adviceElement.innerText = `"${data['slip'].advice}"`;
 
 }
 function showloading() {
@@ -46,7 +46,6 @@ const adviceIdElement = document.getElementById('advice-id');
 const adviceElement = document.getElementById('advice');
 
 btnGetData.addEventListener('click', () => {
-    console.log('clicou')
     getDataFromApi()
 });
 
